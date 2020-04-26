@@ -3,7 +3,7 @@ defmodule Voting.SignInAdmin do
   Signing in as admin
   """
 
-  alias Voting.{Repo, Admin}
+  alias Voting.{Admin, Repo}
 
   def run(email, password) do
     case Repo.get_by(Admin, email: email) do
